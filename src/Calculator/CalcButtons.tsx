@@ -6,6 +6,8 @@ import {
   setDigit,
   setEqual,
   setOperator,
+  setPoint,
+  setReverse,
 } from "../Redux/sumSlice";
 
 interface CalculatorButtonProps {
@@ -71,9 +73,9 @@ const CalcData: React.FC = () => {
       onClick: () => dispatch(setOperator("+")),
       className: "text-green-600",
     },
-    { label: "+-" },
-    { label: "0" },
-    { label: "." },
+    { label: "+-", onClick: () => dispatch(setReverse("-")) },
+    { label: "0", onClick: () => dispatch(setDigit("0")) },
+    { label: ".", onClick: () => dispatch(setPoint(".")) },
     {
       label: "=",
       onClick: () => dispatch(setEqual()),
