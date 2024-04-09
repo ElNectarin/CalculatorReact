@@ -3,12 +3,10 @@ import { useSelector } from "react-redux";
 import type { RootState } from "../Redux/store";
 
 function CalcDsiplay() {
-  const sumOperator = useSelector(
-    (state: RootState) => state.sumReducer.sumOperator
-  );
-  const aNumber = useSelector((state: RootState) => state.sumReducer.aNumber);
-  const bNumber = useSelector((state: RootState) => state.sumReducer.bNumber);
-  const sumEqual = useSelector((state: RootState) => state.sumReducer.sumEqual);
+  const sumOperator = useSelector((state: RootState) => state.sum.sumOperator);
+  const aNumber = useSelector((state: RootState) => state.sum.aNumber);
+  const bNumber = useSelector((state: RootState) => state.sum.bNumber);
+  const sumEqual = useSelector((state: RootState) => state.sum.sumEqual);
   return (
     <>
       <div className="m-auto h-60 bg-white relative">
